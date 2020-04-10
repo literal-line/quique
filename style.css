@@ -1,0 +1,105 @@
+html {
+	background-image: url("images/scary.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #000000;
+	font-family: "Courier New";
+}
+
+body {
+	background-color: #FFFFFE;
+	border: 1px solid #000000;
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	max-width: 1000px;
+	opacity: 0.95;
+}
+
+
+
+
+/* cool stuff */
+
+nav {
+	background-color: LightSteelBlue;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	color: #000000;
+	list-style-type: none;
+	margin: 15px;
+	text-align: center;
+	text-shadow: 4px 4px 8px #808080;
+}
+
+nav a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav a:active {
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #000099;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	display: inline-block;
+	font-weight: bold;
+}
+
+footer {
+	text-align: center;
+}
+
+footer a {
+	color: #000099;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+tr, td, th {
+	border: 1px solid #000000;
+}
+
+table {
+	border: 2px solid #000000;
+	border-collapse: collapse;
+	width: 85%;
+}
+
+table a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/* id stuff */
+
+#main-content {
+	min-height: 80vh;
+	text-align: center;
+}
+
+
+#logo {
+	display: block;
+	margin: auto;
+	padding: 15px;
+	height: 100px;
+	width: 600px;
+}
+
+.articleimg {
+	float: right;
+}
+
