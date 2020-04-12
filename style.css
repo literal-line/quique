@@ -1,5 +1,5 @@
 html {
-	background-image: url("images/scary.jpg");
+	background-image: url("media/plainsky.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #000000;
@@ -34,12 +34,8 @@ nav {
 }
 
 nav a {
-	color: #000000;
+	color: #000000; 
 	text-decoration: none;
-}
-
-nav a:active {
-	font-weight: bold;
 }
 
 nav a:hover {
@@ -54,7 +50,6 @@ nav ul {
 
 nav li {
 	display: inline-block;
-	font-weight: bold;
 }
 
 footer {
@@ -72,6 +67,7 @@ tr, td, th {
 }
 
 table {
+	background-color: #C3C3DF;
 	border: 2px solid #000000;
 	border-collapse: collapse;
 	width: 85%;
@@ -81,6 +77,15 @@ table a {
 	text-decoration: none;
 	font-weight: bold;
 }
+
+video {
+	border: 3px solid #000000;
+	box-shadow: 15px 15px #777777;
+	height: 100vh;
+	min-height: 100%;
+}
+
+
 
 
 /* id stuff */
@@ -98,8 +103,3 @@ table a {
 	height: 100px;
 	width: 600px;
 }
-
-.articleimg {
-	float: right;
-}
-
