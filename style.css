@@ -10,6 +10,7 @@ body {
 	background-color: #FFFFFE;
 	border: 1px solid #000000;
 	border-radius: 15px;
+	box-shadow: 8px 8px 4px #808080;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 25px;
@@ -95,11 +96,30 @@ video {
 	text-align: center;
 }
 
-
 #logo {
 	display: block;
 	margin: auto;
 	padding: 15px;
 	height: 100px;
 	width: 600px;
+}
+
+
+
+
+/* class stuff */
+
+.note {
+	background-color: #FFCCCB;
+	background-image: url('media/silk_icons/information.png');
+	background-position: 10px;
+	background-repeat: no-repeat;
+	border: 1px solid #000000;
+	color: #FF0000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding: 5px;
+	width: 90%;
 }
