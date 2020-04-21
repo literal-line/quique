@@ -81,13 +81,6 @@ table a {
 	font-weight: bold;
 }
 
-video {
-	border: 3px solid #000000;
-	box-shadow: 15px 15px #777777;
-	height: 100vh;
-	min-height: 100%;
-}
-
 
 
 
@@ -110,6 +103,11 @@ video {
 
 
 /* class stuff */
+
+.image {
+	border: 2px solid #000000;
+	box-shadow: 5px 5px 5px #777777;
+}
 
 .note {
 	background-color: #FFCCCB;
