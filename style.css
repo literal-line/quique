@@ -23,6 +23,10 @@ body {
 
 /* cool stuff */
 
+div {
+	padding: 15px;
+}
+
 nav {
 	background-color: LightSteelBlue;
 	border: 1px solid #000000;
