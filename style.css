@@ -99,7 +99,14 @@ table a {
 	width: 60%;
 }
 
-
+#jajaja {
+	color: #FFFF00;
+	display: none;
+	font-size: 30pt;
+	min-height: 80vh;
+	text-align: center;
+	text-shadow: 5px 5px #FF0000;
+}
 
 
 /* class stuff */
