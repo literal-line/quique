@@ -1,6 +1,8 @@
 html {
-	background-image: url("media/plainsky.jpg");
-	background-repeat: no-repeat;
+	background: url("media/plainsky.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 	color: #000000;
 	font-family: "Courier New";
@@ -72,8 +74,9 @@ table {
 	background-color: #A0B2C9;
 	border: 2px solid #000000;
 	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
 	font-family: "Lucida Console";
-	width: 85%;
 }
 
 table a {
@@ -88,6 +91,9 @@ table a {
 
 #main-content {
 	min-height: 80vh;
+	padding-bottom: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
 	text-align: center;
 }
 
