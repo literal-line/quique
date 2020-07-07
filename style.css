@@ -1,3 +1,8 @@
+@font-face {
+	font-family: lucidaConsole;
+	src: url(lcr.ttf);
+}
+
 html {
 	background: url("media/plainsky.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -5,7 +10,7 @@ html {
 	-o-background-size: cover;
 	background-size: cover;
 	color: #000000;
-	font-family: "Lucida Console";
+	font-family: "lucidaConsole";
 }
 
 body {
@@ -13,6 +18,7 @@ body {
 	border: 1px solid #000000;
 	border-radius: 15px;
 	box-shadow: 8px 8px 4px #808080;
+	font-family: "Lucida Console";
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 25px;
