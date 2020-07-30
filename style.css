@@ -3,12 +3,20 @@
 	src: url(lcr.ttf);
 }
 
+@-webkit-keyframes scrolling {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -445px -252px;
+    }
+}
+
+
+
 html {
-	background: url("media/plainsky.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	animation: scrolling 3s linear infinite;
+	background-image: url('media/bgscroll.png');
 	color: #000000;
 }
 
@@ -16,13 +24,14 @@ body {
 	background-color: #FFFFFE;
 	border: 1px solid #000000;
 	border-radius: 15px;
-	box-shadow: 8px 8px 4px #808080;
+	box-shadow: 8px 8px 4px #808077;
 	font-family: "lcr";
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 25px;
 	max-width: 1000px;
 	opacity: 0.95;
+	z-index: 0;
 }
 
 
@@ -106,10 +115,12 @@ table a {
 
 #logo {
 	display: block;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
 	margin: auto;
 	padding: 15px;
 	height: auto;
-	width: 60%;
+	width: 55%;
 }
 
 #jajaja {
