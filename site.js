@@ -24,13 +24,13 @@ var site = (function () { // crap code but i was in a hurry
     iframe.onload = urlChange;
 
     if (window.location.hash) {
-        if (window.location.hash === '#index.html') {
-            iframe.src = 'home.html';
+        if (window.location.hash === '#') {
+            iframe.src = 'home';
         } else {
-            iframe.src = window.location.hash.slice(1) + '.html';
+            iframe.src = window.location.hash.slice(1);
         }
     } else {
-        iframe.src = 'home.html';
+        iframe.src = 'home';
     }
 
     console.log('%cQuique.gq', 'background: #304888; border: 1px solid #FFFFFF; padding: 10px; border-radius: 3px; font-family: "Data 70 Regular"; font-size: 72px; color: #FFFFFF; -webkit-text-stroke: 2px #000000;');
