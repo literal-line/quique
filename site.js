@@ -1,5 +1,7 @@
-var site = (function () {
-    var iframe = document.getElementById('content');
+var site = (function () { // crap code but i was in a hurry
+    var iframe = document.createElement('iframe');
+    iframe.style = 'width: 100%; border: none; width: 99vw; height: 75vh';
+    document.body.appendChild(iframe);
     var jsNotice = document.getElementById('jsNotice');
     jsNotice.remove();
 
@@ -18,6 +20,8 @@ var site = (function () {
         var pathname = iframe.contentWindow.location.pathname.slice(1, -5);
         window.location.hash = pathname === 'home' ? '' : pathname
     };
+
+    iframe.onload = urlChange;
 
     if (window.location.hash) {
         if (window.location.hash === '#index.html') {
