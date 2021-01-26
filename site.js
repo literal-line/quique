@@ -1,6 +1,6 @@
 var site = (function () { // crap code but i was in a hurry
     var iframe = document.createElement('iframe');
-    iframe.style = 'width: 100%; border: none; width: 95vw;';
+    iframe.style = 'width: 100%; border: none; width: 100vw;';
     document.body.appendChild(iframe);
     var jsNotice = document.getElementById('jsNotice');
     jsNotice.remove();
