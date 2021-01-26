@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'Data 70 Regular';
-	src: url('./assets/Data\ 70\ Regular.otf');
+	font-family: 'Lucida Console';
+	src: url('./assets/lcr.woff2');
 }
 
 
@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Lucida Console', sans-serif;
     color: #000000;
 }
 
