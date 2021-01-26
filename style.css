@@ -3,10 +3,10 @@
 	src: url('./assets/Data\ 70\ Regular.otf');
 }
 
-@font-face {
+/*@font-face {
     font-family: 'Lucida Console';
     src: url('./assets/lcr.ttf')
-}
+}*/
 
 * {
     padding: 0;
