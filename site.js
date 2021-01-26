@@ -19,6 +19,7 @@ var site = (function () { // crap code but i was in a hurry
     var urlChange = function () {
         var pathname = iframe.contentWindow.location.pathname.slice(1, -5);
         window.location.hash = pathname === 'home' ? '' : pathname;
+        console.log(pathname)
         console.log('lol');
     };
 
