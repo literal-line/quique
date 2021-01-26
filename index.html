@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Quique.gq</title>
-		<link rel="shortcut icon" type="image/png" href="media/favicon.png"/>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<meta charset="UTF-8">
-		<meta name="description" content="Quique Zone">
-		<meta name="keywords" content="Fortnite, Roblox, Chinese, Quique">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	<body>
-		<img id="logo" src="media/logo.png">
-		<div id="main-content">
-			<nav>
-				<ul>
-					<li><a href="index.html"><h3>Home</h3></a></li>
-					&nbsp
-					<li><a href="stuff.html"><h3>Stuff</h3></a></li>
-					&nbsp
-					<li><a href="about.html"><h3>About</h3></a></li>
-				</ul>
-			</nav>
-			<h1>Welcome to the Quique Zone,</h1>
-			<p>a magical place for kids and grown-ups alike,
-				 where fantasy and fun come to life. Quique
-				  is not responsible for damage to property
-				   or person. Upon discovering that damage
-					or death has occurred, a missing person
-					 report will be filed within 90 days,
-					  or as soon property and premises have
-					   been thoroughly cleaned and bleached,
-					    and the carpets have been replaced.</2>
-		</div>
-		<div id="jajaja">
-			<h1>What</h1>
-			<h2>are you doing</h2>
-		</div>
-		<footer>
-			<hr style="width: 80%">
-			<script src="js/bye.js"></script>
-			<audio id="audio" src="media/monster_mash.mp3"></audio>
-			<p>Made by <button onclick="bye()">Quique</button></p>
-		</footer>
-	</body>
+<head>
+	<title>Quique.gq</title>
+	<link rel="icon" type="image/png" href="./assets/favicon.png" />
+	<link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="Quique Zone">
+	<meta name="keywords" content="Fortnite, Roblox, Chinese, Quique">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@-webkit-keyframes scrolling {
+			from {
+				background-position: 0px 0px;
+			}
+
+			to {
+				background-position: -445px -252px;
+			}
+		}
+
+
+		body {
+			animation: scrolling 3s linear infinite;
+			background-image: url('./assets/bgscroll.png');
+		}
+	</style>
+</head>
+<body onload="site.go()">
+	<div style="position: relative; width: 500px; height: 180px">
+		<a href="index.html"><img id="logo" style="width: 100%" src="./assets/logo.svg"></a>
+	</div>
+	<h1 id="jsNotice" style="color: #FFFFFF; padding: 25px;">Enable Javascript to use this site! (What kind of idiot would leave it off??)</h1>
+	<iframe id="content" onload="site.urlChange()" style="width: 100%; border: none; width: 99vw; height: 75vh"></iframe>
+	<script src="site.js"></script>
+</body>
 </html>
