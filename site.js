@@ -17,10 +17,8 @@ var site = (function () { // crap code but i was in a hurry
     };
 
     var urlChange = function () {
-        var pathname = iframe.contentWindow.location.pathname.slice(1, -5);
+        var pathname = iframe.contentWindow.location.pathname.slice(1);
         window.location.hash = pathname === 'home' ? '' : pathname;
-        console.log(iframe.contentWindow.location.pathname)
-        console.log('lol');
     };
 
     iframe.onload = urlChange;
