@@ -84,7 +84,7 @@ var site = (function () { // funny code
                 offsetX = Math.sin(counter / 50) * 10;
                 offsetY = Math.sin(counter / 25) * 10;
                 logo.style.left = offsetX + 'px';
-                logo.style.top = offsetY + 'px';
+                logo.style.top = offsetY - 15 + 'px';
 
                 if (Math.floor(counter) % (randInt(25) + 1) === 0) circles.unshift(new Circle());
                 if (Math.floor(counter) % 300 === 0 && counter - lastCounter >= 1) {
@@ -102,7 +102,7 @@ var site = (function () { // funny code
 
                 counter += ms / (1000 / 60);
                 caption.innerHTML = idiotText;
-                caption.style.top = banner.height - 32 + offsetY + 'px';
+                caption.style.top = banner.height - 50 + offsetY + 'px';
                 caption.style.left = offsetX + 50 + 'px';
                 lastDelta = delta;
                 requestAnimationFrame(loop);
