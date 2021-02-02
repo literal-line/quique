@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'Lucida Console';
-	src: url('./assets/lcr.woff2');
+	font-family: 'IBM';
+	src: url('./assets/ibm-plex-mono-v6.woff2');
 }
 
 
@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'Lucida Console', sans-serif;
+    font-family: 'IBM', sans-serif;
     color: #000000;
     font-size: 16px;
 }

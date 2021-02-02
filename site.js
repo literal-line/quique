@@ -26,7 +26,7 @@ var site = (function () { // funny code
                 'drive thru only',
                 'new and improved!',
                 'the messenger of allah (may peace be upon him)',
-                'when the imposter is delicious ඞ',
+                'when the imposter is delicious 🍗ඞ',
                 'cornball /ˈkôrnbôl/ - adjective - trite and sentimental',
                 'WHERE IS MARIO JUDAH?',
                 'they tryna be carti',
@@ -42,7 +42,12 @@ var site = (function () { // funny code
                 'a landlocked country between vietnam and thailand',
                 'population: 4.7 million',
                 'you\'re a nutjob',
-                'my fellow americans'
+                'my fellow americans',
+                'bring your own bacillicide',
+                'prices lower than low for food fresher than fresh',
+                'cheesed to meet you',
+                'you have left me quite discheesed',
+                'soy_wojak.png'
             ];
             var idiotText;
 
@@ -92,7 +97,7 @@ var site = (function () { // funny code
                 ctx.lineWidth = 3;
                 ctx.strokeStyle = '#000000';
                 ctx.fillStyle = '#FFFFFF';
-                ctx.font = '20px Lucida Console';
+                ctx.font = '20px IBM';
                 ctx.strokeText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
                 ctx.fillText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
                 lastDelta = delta;
