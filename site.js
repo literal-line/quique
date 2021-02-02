@@ -1,4 +1,7 @@
-var site = (function () { // crap code but i was in a hurry
+var site = (function () { // funny code
+    'use strict';
+
+
     var iframe = document.createElement('iframe');
     iframe.style = 'width: 100%; border: none; width: 100vw;';
     document.body.appendChild(iframe);
@@ -27,12 +30,19 @@ var site = (function () { // crap code but i was in a hurry
                 'cornball /ˈkôrnbôl/ - adjective - trite and sentimental',
                 'WHERE IS MARIO JUDAH?',
                 'they tryna be carti',
+                'hello my name is slim shady',
                 'this is the greatest website of all time',
                 'left wing destroyed',
                 'aw hell naw spunch bob took 40 benadryls',
                 'juan',
                 'me when the',
-                'i may be stupid'
+                'i may be stupid',
+                'bogos binted?',
+                'cry about it',
+                'a landlocked country between vietnam and thailand',
+                'population: 4.7 million',
+                'you\'re a nutjob',
+                'my fellow americans'
             ];
             var idiotText;
 
@@ -74,7 +84,7 @@ var site = (function () { // crap code but i was in a hurry
                 
                 circles.forEach(function(cur) {
                     cur.draw();
-                    cur.x += ms / 2;
+                    if (ms < 100) cur.x += ms / 2;
                     if (cur.x > banner.width) circles.pop();
                 });
 
