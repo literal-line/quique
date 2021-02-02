@@ -1,7 +1,7 @@
-@font-face {
+/*@font-face {
 	font-family: 'IBM';
 	src: url('./assets/ibm-plex-mono-v6.woff2');
-}
+}*/
 
 
 * {
@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'Courier New';
+    font-family: 'IBM', 'Courier New';
     color: #000000;
     font-size: 16px;
 }
