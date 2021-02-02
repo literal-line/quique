@@ -8,8 +8,11 @@ var site = (function () { // funny code
 
     var doLogoEffect = function () {
         var logo = document.getElementById('logo');
+        var caption = document.createElement('p');
         var banner = document.getElementById('banner');
         var ctx = banner.getContext('2d');
+        caption.style = 'position: absolute; text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000; font-weight: bold; color: #FFFFFF';
+        document.getElementById('topContainer').appendChild(caption);
         banner.width = window.innerWidth;
         banner.height = 180;
         var loop = (function () {
@@ -98,12 +101,9 @@ var site = (function () { // funny code
                 });
 
                 counter += ms / (1000 / 60);
-                ctx.lineWidth = 3;
-                ctx.strokeStyle = '#000000';
-                ctx.fillStyle = '#FFFFFF';
-                ctx.font = '20px IBM, Courier New';
-                ctx.strokeText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
-                ctx.fillText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
+                caption.innerHTML = idiotText;
+                caption.style.top = banner.height - 32 + offsetY + 'px';
+                caption.style.left = offsetX + 50 + 'px';
                 lastDelta = delta;
                 requestAnimationFrame(loop);
             }
