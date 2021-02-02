@@ -97,7 +97,7 @@ var site = (function () { // funny code
                 ctx.lineWidth = 3;
                 ctx.strokeStyle = '#000000';
                 ctx.fillStyle = '#FFFFFF';
-                ctx.font = '20px IBM';
+                ctx.font = '20px IBM, Courier New';
                 ctx.strokeText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
                 ctx.fillText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
                 lastDelta = delta;
