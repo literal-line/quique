@@ -12,10 +12,11 @@ var site = (function () { // funny code
         var ctx = banner.getContext('2d');
         banner.width = window.innerWidth;
         banner.height = 180;
-        var loop = (function() {
+        var loop = (function () {
             var lastDelta = 0;
             var ms = 0;
             var counter = 0;
+            var lastCounter = -1;
             var offsetX;
             var offsetY;
             var circles = [];
@@ -52,7 +53,7 @@ var site = (function () { // funny code
             ];
             var idiotText;
 
-            var fillCircle = function(x, y, radius, rad1, rad2, color) {
+            var fillCircle = function (x, y, radius, rad1, rad2, color) {
                 ctx.beginPath();
                 ctx.arc(x, y, radius, rad1, rad2, false);
                 ctx.fillStyle = color;
@@ -61,17 +62,17 @@ var site = (function () { // funny code
                 ctx.stroke();
             };
 
-            var Circle = function() {
+            var Circle = function () {
                 this.x = 0;
                 this.y = randInt(banner.height);
-                this.c = [ randInt(Math.PI * 2), randInt(Math.PI * 2) ];
+                this.c = [randInt(Math.PI * 2), randInt(Math.PI * 2)];
             };
 
-            Circle.prototype.draw = function() {
+            Circle.prototype.draw = function () {
                 fillCircle(this.x - 2, this.y, 3, this.c[0], this.c[1], 'rgba(255, 255, 255, 0.75)');
             };
 
-            return function(delta) {
+            return function (delta) {
                 ms = delta - lastDelta;
                 banner.width = window.innerWidth;
                 banner.height = 180;
@@ -79,16 +80,18 @@ var site = (function () { // funny code
                 iframe.style.height = window.innerHeight - 180 + 'px';
                 offsetX = Math.sin(counter / 50) * 10;
                 offsetY = Math.sin(counter / 25) * 10;
-                logo.style.left = offsetX + 'px';                logo.style.top =  offsetY + 'px';
-                
+                logo.style.left = offsetX + 'px';
+                logo.style.top = offsetY + 'px';
+
                 if (Math.floor(counter) % (randInt(25) + 1) === 0) circles.unshift(new Circle());
-                if (Math.floor(counter) % 300 === 0) {
+                if (Math.floor(counter) % 300 === 0 && counter - lastCounter >= 1) {
                     var newText = idiotText;
                     while (newText === idiotText) newText = sacred[randInt(sacred.length)];
                     idiotText = newText;
+                    lastCounter = counter;
                 }
-                
-                circles.forEach(function(cur) {
+
+                circles.forEach(function (cur) {
                     cur.draw();
                     if (ms < 100) cur.x += ms / 2;
                     if (cur.x > banner.width) circles.pop();
