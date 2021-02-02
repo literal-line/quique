@@ -94,7 +94,7 @@ var site = (function () { // funny code
                     if (cur.x > banner.width) circles.pop();
                 });
 
-                counter += 1000 / 60 / ms;
+                counter += ms / (1000 / 60);
                 ctx.lineWidth = 3;
                 ctx.strokeStyle = '#000000';
                 ctx.fillStyle = '#FFFFFF';
