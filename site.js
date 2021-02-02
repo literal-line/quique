@@ -2,19 +2,94 @@ var site = (function () { // crap code but i was in a hurry
     var iframe = document.createElement('iframe');
     iframe.style = 'width: 100%; border: none; width: 100vw;';
     document.body.appendChild(iframe);
-    var jsNotice = document.getElementById('jsNotice');
-    jsNotice.remove();
 
     var doLogoEffect = function () {
         var logo = document.getElementById('logo');
-        logo.style.position = 'absolute';
-        var offset = 0;
-        setInterval(function () {
-            iframe.style.height = window.innerHeight - 180 + 'px';
-            logo.style.top = Math.sin(offset / 25) * 10 + 'px';
-            logo.style.left = Math.cos(offset / 50) * 10 + 'px';
-            offset++;
-        }, 1000 / 60);
+        var banner = document.getElementById('banner');
+        var ctx = banner.getContext('2d');
+        banner.width = window.innerWidth;
+        banner.height = 180;
+        var loop = (function() {
+            var lastDelta = 0;
+            var ms = 0;
+            var counter = 0;
+            var offsetX;
+            var offsetY;
+            var circles = [];
+            var sacred = [
+                'we do a little trolling',
+                'grilled cheems sandwich',
+                'was that the bite of \'87?',
+                'drive thru only',
+                'new and improved!',
+                'the messenger of allah (may peace be upon him)',
+                'when the imposter is delicious ඞ',
+                'cornball /ˈkôrnbôl/ - adjective - trite and sentimental',
+                'WHERE IS MARIO JUDAH?',
+                'they tryna be carti',
+                'this is the greatest website of all time',
+                'left wing destroyed',
+                'aw hell naw spunch bob took 40 benadryls',
+                'juan',
+                'me when the',
+                'i may be stupid'
+            ];
+            var idiotText;
+
+            var fillCircle = function(x, y, radius, rad1, rad2, color) {
+                ctx.beginPath();
+                ctx.arc(x, y, radius, rad1, rad2, false);
+                ctx.fillStyle = color;
+                ctx.strokeStyle = 'rgba(0, 0, 0, 0)';
+                ctx.fill();
+                ctx.stroke();
+            };
+
+            var Circle = function() {
+                this.x = 0;
+                this.y = randInt(banner.height);
+                this.c = [ randInt(Math.PI * 2), randInt(Math.PI * 2) ];
+            };
+
+            Circle.prototype.draw = function() {
+                fillCircle(this.x - 2, this.y, 3, this.c[0], this.c[1], 'rgba(255, 255, 255, 0.75)');
+            };
+
+            return function(delta) {
+                ms = delta - lastDelta;
+                banner.width = window.innerWidth;
+                banner.height = 180;
+
+                iframe.style.height = window.innerHeight - 180 + 'px';
+                offsetX = Math.sin(counter / 50) * 10;
+                offsetY = Math.sin(counter / 25) * 10;
+                logo.style.left = offsetX + 'px';                logo.style.top =  offsetY + 'px';
+                
+                if (Math.floor(counter) % (randInt(25) + 1) === 0) circles.unshift(new Circle());
+                if (Math.floor(counter) % 300 === 0) {
+                    var newText = idiotText;
+                    while (newText === idiotText) newText = sacred[randInt(sacred.length)];
+                    idiotText = newText;
+                }
+                
+                circles.forEach(function(cur) {
+                    cur.draw();
+                    cur.x += ms / 2;
+                    if (cur.x > banner.width) circles.pop();
+                });
+
+                counter += 1000 / 60 / ms;
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#000000';
+                ctx.fillStyle = '#FFFFFF';
+                ctx.font = '20px Lucida Console';
+                ctx.strokeText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
+                ctx.fillText(idiotText, offsetX + 50, banner.height - 15 + offsetY);
+                lastDelta = delta;
+                requestAnimationFrame(loop);
+            }
+        })();
+        requestAnimationFrame(loop);
     };
 
     var urlChange = function () {
@@ -44,3 +119,7 @@ var site = (function () { // crap code but i was in a hurry
         urlChange: urlChange
     }
 })();
+
+function randInt(max) {
+    return Math.floor(Math.random() * max);
+}
