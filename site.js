@@ -113,7 +113,6 @@ var site = (function () { // funny code
 
     var urlChange = function () {
         var pathname = iframe.contentWindow.location.pathname.slice(1);
-        console.log(pathname)
         window.history.pushState('', '', pathname === 'home' ? '/' : '/' + pathname);
     };
     iframe.onload = urlChange;
