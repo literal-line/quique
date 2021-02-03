@@ -65,13 +65,13 @@ var site = (function () { // funny code
                 ctx.stroke();
             };
 
-            var Circle = function () {
+            var Snowflake = function () {
                 this.x = 0;
                 this.y = randInt(banner.height);
                 this.c = [randInt(Math.PI * 2), randInt(Math.PI * 2)];
             };
 
-            Circle.prototype.draw = function () {
+            Snowflake.prototype.draw = function () {
                 fillCircle(this.x - 2, this.y, 3, this.c[0], this.c[1], 'rgba(255, 255, 255, 0.75)');
             };
 
@@ -86,7 +86,7 @@ var site = (function () { // funny code
                 logo.style.left = offsetX + 'px';
                 logo.style.top = offsetY - 15 + 'px';
 
-                if (Math.floor(counter) % (randInt(25) + 1) === 0) circles.unshift(new Circle());
+                if (Math.floor(counter) % (randInt(25) + 1) === 0) circles.unshift(new Snowflake());
                 if (Math.floor(counter) % 300 === 0 && counter - lastCounter >= 1) {
                     var newText = idiotText;
                     while (newText === idiotText) newText = sacred[randInt(sacred.length)];
