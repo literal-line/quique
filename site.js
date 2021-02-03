@@ -113,19 +113,20 @@ var site = (function () { // funny code
 
     var urlChange = function () {
         var pathname = iframe.contentWindow.location.pathname.slice(1);
-        window.location.hash = pathname === 'home' ? '' : pathname;
+        window.history.pushState('', '', pathname === 'home' ? '' : '/' + pathname);
     };
-
     iframe.onload = urlChange;
 
     if (window.location.hash) {
-        if (window.location.hash === '#') {
-            iframe.src = 'home';
-        } else {
-            iframe.src = window.location.hash.slice(1);
-        }
-    } else {
+        var pathname = window.location.hash.slice(1);
+        iframe.src = pathname;
+        window.history.pushState('', '', pathname === 'home' ? '' : '/' + pathname);
+    }
+
+    if (window.location.pathname === '/') {
         iframe.src = 'home';
+    } else {
+        iframe.src = window.location.pathname.slice(1);
     }
 
     console.log('%cQuique.gq', 'background: #304888; border: 1px solid #FFFFFF; padding: 10px; border-radius: 3px; font-family: "Data 70 Regular"; font-size: 72px; color: #FFFFFF; -webkit-text-stroke: 2px #000000;');
