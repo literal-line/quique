@@ -113,14 +113,15 @@ var site = (function () { // funny code
 
     var urlChange = function () {
         var pathname = iframe.contentWindow.location.pathname.slice(1);
-        window.history.pushState('', '', pathname === 'home' ? '' : '/' + pathname);
+        console.log(pathname)
+        window.history.pushState('', '', pathname === 'home' ? '/' : '/' + pathname);
     };
     iframe.onload = urlChange;
 
     if (window.location.hash) {
         var pathname = window.location.hash.slice(1);
         iframe.src = pathname;
-        window.history.pushState('', '', pathname === 'home' ? '' : '/' + pathname);
+        window.history.pushState('', '', pathname === 'home' ? '/' : '/' + pathname);
     }
 
     if (window.location.pathname === '/') {
