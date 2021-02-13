@@ -34,7 +34,7 @@ var site = (function () { // funny code
                 'cornball /ˈkôrnbôl/ - adjective - trite and sentimental',
                 'WHERE IS MARIO JUDAH?',
                 'they tryna be cray',
-                'they wanna meet carti',
+                'she wanna meet carti',
                 'hello my name is slim shady',
                 'this is the greatest website of all time',
                 'left wing destroyed',
