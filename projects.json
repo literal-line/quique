@@ -1,17 +1,17 @@
 {
   "projects": [
-    "http://api.github.com/repos/literal-line/the-tower-of-power",
-    "http://api.github.com/repos/literal-line/hello-world",
-    "http://api.github.com/repos/literal-line/rpg-test-map-editor",
-    "http://api.github.com/repos/literal-line/rpg-test",
-    "http://api.github.com/repos/literal-line/ptc.js",
-    "http://api.github.com/repos/literal-line/cool-gui",
-    "http://api.github.com/repos/literal-line/logos",
-    "http://api.github.com/repos/literal-line/gaming",
-    "http://api.github.com/repos/literal-line/mighty-ears",
-    "http://api.github.com/repos/literal-line/snore",
-    "http://api.github.com/repos/literal-line/watercyclething",
-    "http://api.github.com/repos/literal-line/potcorn",
-    "http://api.github.com/repos/literal-line/quique"
+    "https://api.github.com/repos/literal-line/the-tower-of-power",
+    "https://api.github.com/repos/literal-line/hello-world",
+    "https://api.github.com/repos/literal-line/rpg-test-map-editor",
+    "https://api.github.com/repos/literal-line/rpg-test",
+    "https://api.github.com/repos/literal-line/ptc.js",
+    "https://api.github.com/repos/literal-line/cool-gui",
+    "https://api.github.com/repos/literal-line/logos",
+    "https://api.github.com/repos/literal-line/gaming",
+    "https://api.github.com/repos/literal-line/mighty-ears",
+    "https://api.github.com/repos/literal-line/snore",
+    "https://api.github.com/repos/literal-line/watercyclething",
+    "https://api.github.com/repos/literal-line/potcorn",
+    "https://api.github.com/repos/literal-line/quique"
   ]
 }
