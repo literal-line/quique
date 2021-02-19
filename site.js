@@ -119,7 +119,7 @@ var site = (function () { // funny code
 
     if (window.location.hash) {
         var pathname = window.location.hash.slice(1);
-        iframe.src = pathname;
+        iframe.src = pathname + '.html';
         window.history.pushState('', '', pathname === 'home' ? '/' : '/' + pathname);
     }
 
