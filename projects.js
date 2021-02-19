@@ -15,7 +15,7 @@
   loadJSON('./projects.json', function (json) {
     var list = {};
     for (var i = 0; i < json.projects.length; i++) {
-      var cur = json.projects[i];
+      var cur = 'https://api.github.com/repos/literal-line/' + json.projects[i];
       list[i] = null;
       (function () {
         var pos = i;
