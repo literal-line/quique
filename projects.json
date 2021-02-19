@@ -1,17 +1,82 @@
 {
   "projects": [
-    "the-tower-of-power",
-    "hello-world",
-    "rpg-test-map-editor",
-    "rpg-test",
-    "ptc.js",
-    "cool-gui",
-    "logos",
-    "gaming",
-    "mighty-ears",
-    "snore",
-    "watercyclething",
-    "potcorn",
-    "quique"
+    {
+      "name": "the-tower-of-power",
+      "url": "http://ttop.quique.gq",
+      "desc": "Arcade-style action maze game. Based on The Tower of Druaga.",
+      "source": "http://github.com/literal-line/the-tower-of-power"
+    },
+    {
+      "name": "hello-world",
+      "url": "http://hello-world.quique.gq",
+      "desc": "Tile-based platformer thing. Spunch bop included at no extra cost.",
+      "source": "http://github.com/literal-line/hello-world"
+    },
+    {
+      "name": "rpg-test-map-editor",
+      "url": "http://rpg-test-map-editor.quique.gq",
+      "desc": "Map editor for my project rpg-test. This hasn't been updated in a while and still uses an inefficient tile rendering method.",
+      "source": "http://github.com/literal-line/rpg-test-map-editor"
+    },
+    {
+      "name": "rpg-test",
+      "url": "http://rpg-test.quique.gq",
+      "desc": "Open source Stick Ranger clone.",
+      "source": "http://github.com/literal-line/rpg-test"
+    },
+    {
+      "name": "ptc.js",
+      "url": "http://literal-line.github.io/ptc.js",
+      "desc": "A Petit Computer interpreter thing I gave up on. The first project I wrote in Javascript.",
+      "source": "http://github.com/literal-line/ptc.js"
+    },
+    {
+      "name": "cool-gui",
+      "url": "http://cool-gui.netlify.app",
+      "desc": "A useless GUI created using a modded version of the world's worst programming IDE.",
+      "source": "http://github.com/literal-line/cool-gui"
+    },
+    {
+      "name": "logos",
+      "url": "http://quique-logos.netlify.app",
+      "desc": "Fun Spinny Logos Go WHEEEEEE!!!!",
+      "source": "http://github.com/literal-line/logos"
+    },
+    {
+      "name": "gaming",
+      "url": "http://quique-gaming.netlify.app",
+      "desc": "Trash game with fake 3d and junk.",
+      "source": "http://github.com/literal-line/gaming"
+    },
+    {
+      "name": "mighty-ears",
+      "url": "http://mighty-ears.netlify.app",
+      "desc": "How fast can you make him spin?",
+      "source": "http://github.com/literal-line/mighty-ears"
+    },
+    {
+      "name": "snore",
+      "url": "http://snore.netlify.app",
+      "desc": "SHHH! (You mustn't wake him)",
+      "source": "http://github.com/literal-line/snore"
+    },
+    {
+      "name": "watercyclething",
+      "url": "http://cheadle.netlify.app",
+      "desc": "Don Cheadle is teaching you the water cycle when he gets kidnapped out of nowhere! Embark on a great journey (about eight minutes long) to save Don Cheadle and find the criminal who kidnapped him!",
+      "source": "http://github.com/literal-line/watercyclething"
+    },
+    {
+      "name": "potcorn",
+      "url": "http://potcorn.netlify.app",
+      "desc": "Potcorn. What more needs to be said?",
+      "source": "http://github.com/literal-line/potcorn"
+    },
+    {
+      "name": "quique",
+      "url": "http://quique.gq",
+      "desc": "You are here.",
+      "source": "http://github.com/literal-line/quique"
+    }
   ]
 }

@@ -22,9 +22,10 @@
     th {
       position: sticky;
       top: 55px;
+      white-space: nowrap;
     }
 
-    td {
+    th, td {
       padding: 10px;
     }
 
@@ -40,15 +41,13 @@
     <tr class="bw">
       <th>Project</th>
       <th>Description</th>
-      <th>Last updated</th>
-      <th>Date created</th>
+      <th>Source code</th>
     </tr>
     <tbody id="project-table">
       <!--tr>
 				<td><a href="%url%" target="_blank">%name%</a></td>
 				<td>%desc%</td>
-				<td>%updated%</td>
-				<td>%created%</td>
+        <td><a href="%source%" target="_blank">%sourceLink%</a></td>
 			</tr-->
     </tbody>
   </table>

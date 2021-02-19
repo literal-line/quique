@@ -8,33 +8,20 @@
     '<tr>' +
     '<td><a href="%url%" target="_blank">%name%</a></td>' +
     '<td>%desc%</td>' +
-    '<td>%updated%</td>' +
-    '<td>%created%</td>' +
+    '<td><a href="%source%" target="_blank">%sourceLink%</a></td>' +
     '</tr>';
+  var githubLink = '<img src="./assets/github_icon.svg" width="16px" height="16px" style="padding-right: 8px; transform: translateY(2px)">Github';
 
   loadJSON('./projects.json', function (json) {
-    var list = {};
     for (var i = 0; i < json.projects.length; i++) {
-      var cur = 'https://api.github.com/repos/literal-line/' + json.projects[i];
-      list[i] = null;
-      (function () {
-        var pos = i;
-        loadJSON(cur, function (proj) {
-          var name = proj.name;
-          var desc = proj.description;
-          var url = proj.homepage;
-          var updated = proj.updated_at;
-          var created = proj.created_at;
-          var newRow = row.replace('%name%', name)
-            .replace('%desc%', desc)
-            .replace('%url%', url)
-            .replace('%updated%', updated)
-            .replace('%created%', created);
-          list[pos] = newRow;
-          table.innerHTML = '';
-          for (var l in list) table.innerHTML += list[l];
-        });
-      })();
+      var cur = json.projects[i];
+      var newRow = row
+        .replace('%name%', cur.name)
+        .replace('%desc%', cur.desc)
+        .replace('%url%', cur.url)
+        .replace('%source%', cur.source)
+        .replace('%sourceLink%', cur.source.includes('github') ? githubLink : 'Link');
+        table.insertAdjacentHTML('beforeend', newRow);
     }
   });
 })();
