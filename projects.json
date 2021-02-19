@@ -1,17 +1,17 @@
 {
   "projects": [
-    "https://api.github.com/repos/literal-line/the-tower-of-power",
-    "https://api.github.com/repos/literal-line/hello-world",
-    "https://api.github.com/repos/literal-line/rpg-test-map-editor",
-    "https://api.github.com/repos/literal-line/rpg-test",
-    "https://api.github.com/repos/literal-line/ptc.js",
-    "https://api.github.com/repos/literal-line/cool-gui",
-    "https://api.github.com/repos/literal-line/logos",
-    "https://api.github.com/repos/literal-line/gaming",
-    "https://api.github.com/repos/literal-line/mighty-ears",
-    "https://api.github.com/repos/literal-line/snore",
-    "https://api.github.com/repos/literal-line/watercyclething",
-    "https://api.github.com/repos/literal-line/potcorn",
-    "https://api.github.com/repos/literal-line/quique"
+    "the-tower-of-power",
+    "hello-world",
+    "rpg-test-map-editor",
+    "rpg-test",
+    "ptc.js",
+    "cool-gui",
+    "logos",
+    "gaming",
+    "mighty-ears",
+    "snore",
+    "watercyclething",
+    "potcorn",
+    "quique"
   ]
 }
