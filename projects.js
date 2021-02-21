@@ -15,6 +15,7 @@
   var req = new XMLHttpRequest();
   req.open('GET', './projects.json');
   req.onload = function () {
+    var json = JSON.parse(req.responseText);
     for (var i = 0; i < json.projects.length; i++) {
       var cur = json.projects[i];
       var newRow = row
