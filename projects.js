@@ -11,8 +11,10 @@
     '<td><a href="%source%" target="_blank">%sourceLink%</a></td>' +
     '</tr>';
   var githubLink = '<img src="./assets/github_icon.svg" width="16px" height="16px" style="padding-right: 8px; transform: translateY(2px)">Github';
-
-  loadJSON('./projects.json', function (json) {
+  
+  var req = new XMLHttpRequest();
+  req.open('GET', './projects.json');
+  req.onload = function () {
     for (var i = 0; i < json.projects.length; i++) {
       var cur = json.projects[i];
       var newRow = row
@@ -23,17 +25,6 @@
         .replace('%sourceLink%', cur.source.includes('github') ? githubLink : 'Link');
         table.insertAdjacentHTML('beforeend', newRow);
     }
-  });
-})();
-
-function loadJSON(url, callback) {
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType('application/json');
-  xobj.open('GET', url, true);
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == '200') {
-      callback(JSON.parse(xobj.responseText));
-    }
   };
-  xobj.send(null);
-}
+  req.send();
+})();
