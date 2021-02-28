@@ -22,7 +22,7 @@ var site = (function () { // funny code
       var lastCounter = -1;
       var offsetX;
       var offsetY;
-      var circles = [];
+      var snowflakes = [];
       var sacred = [
         'we do a little trolling',
         'grilled cheems sandwich',
@@ -65,7 +65,8 @@ var site = (function () { // funny code
         ctx.stroke();
       };
 
-      var Snowflake = function () {
+      // during winter
+      /*var Snowflake = function () {
         this.x = 0;
         this.y = randInt(banner.height);
         this.c = [randInt(Math.PI * 2), randInt(Math.PI * 2)];
@@ -73,7 +74,7 @@ var site = (function () { // funny code
 
       Snowflake.prototype.draw = function () {
         fillCircle(this.x - 2, this.y, 3, this.c[0], this.c[1], 'rgba(255, 255, 255, 0.75)');
-      };
+      };*/
 
       return function (delta) {
         ms = delta - lastDelta;
@@ -86,7 +87,7 @@ var site = (function () { // funny code
         logo.style.left = offsetX + 'px';
         logo.style.top = offsetY - 15 + 'px';
 
-        if (Math.floor(counter) % (randInt(25) + 1) === 0) circles.unshift(new Snowflake());
+        //if (Math.floor(counter) % (randInt(25) + 1) === 0) snowflakes.unshift(new Snowflake());
         if (Math.floor(counter) % 300 === 0 && counter - lastCounter >= 1) {
           var newText = idiotText;
           while (newText === idiotText) newText = sacred[randInt(sacred.length)];
@@ -94,11 +95,11 @@ var site = (function () { // funny code
           lastCounter = counter;
         }
 
-        circles.forEach(function (cur) {
+        /*snowflakes.forEach(function (cur) {
           cur.draw();
           if (ms < 100) cur.x += ms / 2;
-          if (cur.x > banner.width) circles.pop();
-        });
+          if (cur.x > banner.width) snowflakes.pop();
+        });*/
 
         counter += ms / (1000 / 60);
         caption.innerHTML = idiotText;
