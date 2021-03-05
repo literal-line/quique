@@ -2,7 +2,7 @@ var site = (function () { // funny code
   'use strict';
 
   var iframe = document.createElement('iframe');
-  iframe.style = 'width: 100%; border: none; width: 100vw; height: ' + (window.innerHeight - 180) + 'px';
+  iframe.style = 'width: 100%; border: none; width: 100vw; height: calc(100vh - 180px)';
   document.body.appendChild(iframe);
 
   var doLogoCaption = function () {
@@ -51,15 +51,6 @@ var site = (function () { // funny code
     newText();
   };
 
-  var doIframe = function () {
-    var resize = function () {
-      iframe.style.height = window.innerHeight - 180 + 'px';
-    };
-
-    window.addEventListener('resize', resize);
-    resize();
-  }
-
   var urlChange = function () {
     var pathname = iframe.contentWindow.location.pathname.slice(1);
     window.history.pushState('', '', pathname === 'home' ? '/' : '/' + pathname);
@@ -84,7 +75,6 @@ var site = (function () { // funny code
   return {
     go: function () {
       doLogoCaption();
-      doIframe();
     },
     urlChange: urlChange
   }
