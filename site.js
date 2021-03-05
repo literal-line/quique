@@ -2,7 +2,8 @@ var site = (function () { // funny code
   'use strict';
 
   var iframe = document.createElement('iframe');
-  iframe.style = 'width: 100%; border: none; width: 100vw';
+  iframe.style = 'width: 100%; border: none; width: 100vw; height: ' + (window.innerHeight - 180) + 'px';
+  document.body.appendChild(iframe);
 
   var doLogoCaption = function () {
     var caption = document.createElement('p');
@@ -51,8 +52,6 @@ var site = (function () { // funny code
   };
 
   var doIframe = function () {
-    document.body.appendChild(iframe);
-
     var resize = function () {
       iframe.style.height = window.innerHeight - 180 + 'px';
     };
