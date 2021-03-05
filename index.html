@@ -20,11 +20,32 @@
       }
     }
 
+    @keyframes levitateX {
+      0% { transform: translateX(-15px); }
+      50% { transform: translateX(10px); }
+      100% { transform: translateX(-15px); }
+    }
+
+    @keyframes levitateY {
+      0% { transform: translateY(-25px); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(-25px); }
+    }
 
     body {
       animation: scrolling 3s linear infinite;
       background-image: url('./assets/bgscroll_blue.png');
       overflow: hidden;
+    }
+
+    #containerX {
+      animation: levitateX 7s cubic-bezier(.3, 0, .7, 1) infinite;
+      animation-delay: -3.25s;
+    }
+
+    #containerY {
+      animation: levitateY 3s cubic-bezier(.45, 0, .55, 1) infinite;
+      animation-delay: -1.5s;
     }
   </style>
 </head>
@@ -32,7 +53,11 @@
   <canvas id="banner" style="position: absolute; top: 0; left: 0; width: 100vw; height: 180px"></canvas>
   <a href="/">
     <div id="topContainer" style="position: relative; max-width: 100vw; width: 500px; height: 180px; overflow: hidden">
-      <img id="logo" style="position: absolute; width: 100%; height: 100%" src="https://d33wubrfki0l68.cloudfront.net/af958675bcee3c1c4c0542a4a5acf8bdf45be081/0c600/assets/logo.svg">
+      <div id="containerX" style="position: relative; width: 100%; height: 100%">
+        <div id="containerY" style="position: absolute; width: 100%; height: 100%">
+          <img id="logo" style="width: 100%; height: 100%" src="https://d33wubrfki0l68.cloudfront.net/af958675bcee3c1c4c0542a4a5acf8bdf45be081/0c600/assets/logo.svg">
+        </div>
+      </div>
     </div>
   </a>
   <noscript>
