@@ -2,6 +2,8 @@ var site = (function () { // funny code
   'use strict';
 
   var iframe = document.createElement('iframe');
+  iframe.style = 'width: 100%; border: none; width: 100vw';
+  document.body.appendChild(iframe);
 
   var doLogoCaption = function () {
     var caption = document.createElement('p');
@@ -49,13 +51,11 @@ var site = (function () { // funny code
     newText();
   };
 
-  var doIframe = function () {
-    iframe.style = 'width: 100%; border: none; width: 100vw';
-    document.body.appendChild(iframe);
-
+  var doIframeResize = function () {
     var resize = function () {
       iframe.style.height = window.innerHeight - 180 + 'px';
     };
+
     window.addEventListener('resize', resize);
     resize();
   }
@@ -84,7 +84,7 @@ var site = (function () { // funny code
   return {
     go: function () {
       doLogoCaption();
-      doIframe();
+      doIframeResize();
     },
     urlChange: urlChange
   }
