@@ -33,12 +33,13 @@
 
     body::before {
       content: '';
-      position: absolute;
-      width: 150vw;
-      height: 150vh;
+      position: fixed;
+      width: calc(100vw + 446px);
+      height: calc(100vh + 252px);
       z-index: -999;
       animation: scrolling 3s linear infinite;
       background: url('./assets/bgscroll_blue.png') repeat;
+      image-rendering: pixelated;
     }
 
     #containerX {
