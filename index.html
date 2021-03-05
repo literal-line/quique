@@ -11,15 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     @keyframes scrolling {
-      from {
-        background-position-x: 0px;
-        background-position-y: 0px;
-      }
-
-      to {
-        background-position-x: -445px;
-        background-position-y: -252px;
-      }
+      0% { transform: translate(0px, 0px); }
+      100% { transform: translate(-446px, -252px); }
     }
 
     @keyframes levitateX {
@@ -35,9 +28,17 @@
     }
 
     body {
-      animation: scrolling 3s linear infinite;
-      background-image: url('./assets/bgscroll_blue.png');
       overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      width: 150vw;
+      height: 150vh;
+      z-index: -999;
+      animation: scrolling 3s linear infinite;
+      background: url('./assets/bgscroll_blue.png') repeat;
     }
 
     #containerX {

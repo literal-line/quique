@@ -1,42 +1,42 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Courier New';
-    color: #000000;
-    font-size: 16px;
+  font-family: 'Courier New';
+  color: #000000;
+  font-size: 16px;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .button {
-    background: #FFFFFF;
-    border: 10px outset #DDDDDD;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px;
-    font-size: 64px;
+  background: #FFFFFF;
+  border: 10px outset #DDDDDD;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  font-size: 64px;
 }
 
 .buttonSmall {
-    background: #FFFFFF;
-    border: 3px outset #DDDDDD;
-    border-radius: 3px;
-    padding: 5px;
-    margin: 20px;
-    font-size: 24px;
-    text-align: center;
+  background: #FFFFFF;
+  border: 3px outset #DDDDDD;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 20px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .button:active {
-    border: 10px inset #DDDDDD;
+  border: 10px inset #DDDDDD;
 }
 
 .buttonSmall:active {
-    border: 3px inset #DDDDDD;
+  border: 3px inset #DDDDDD;
 }
