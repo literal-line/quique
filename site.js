@@ -3,7 +3,6 @@ var site = (function () { // funny code
 
   var iframe = document.createElement('iframe');
   iframe.style = 'width: 100%; border: none; width: 100vw; height: calc(100vh - 180px)';
-  iframe.title = 'content';
   document.body.appendChild(iframe);
 
   var doLogoCaption = function () {
