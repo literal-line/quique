@@ -10,10 +10,10 @@
     '<td>%desc%</td>' +
     '<td><a href="%source%" target="_blank">%sourceLink%</a></td>' +
     '</tr>';
-  var githubLink = '<img src="./assets/github_icon.svg" width="16px" height="16px" style="padding-right: 8px; transform: translateY(2px)">Github';
+  var githubLink = '<img src="./assets/github_icon.svg" alt="Github Icon" width="16px" height="16px" style="padding-right: 8px; transform: translateY(2px)">Github';
   
   var req = new XMLHttpRequest();
-  req.open('GET', './projects.json');
+  req.open('GET', './assets/projects.json');
   req.onload = function () {
     var json = JSON.parse(req.responseText);
     for (var i = 0; i < json.projects.length; i++) {
