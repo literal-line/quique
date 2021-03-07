@@ -3,7 +3,7 @@
     {
       "name": "Pubie.js",
       "url": "http://pubie.quique.gq",
-      "desc": "Javascript port of Hoylecake's game \"Pubie.\" The original game can be found <a href=\"https://hoylecake.com/pubie/\" target="_blank">here</a>.",
+      "desc": "Javascript port of Hoylecake's game \"Pubie.\" The original game can be found <a href=\"https://hoylecake.com/pubie/\" target=\"_blank\">here</a>.",
       "source": "http://github.com/quique-gq/pubie.js"
     },
     {
