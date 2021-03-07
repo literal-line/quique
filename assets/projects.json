@@ -1,28 +1,34 @@
 {
   "projects": [
     {
+      "name": "Pubie.js",
+      "url": "http://pubie.quique.gq",
+      "desc": "Javascript port of Hoylecake's game \"Pubie.\" The original game can be found <a href=\"https://hoylecake.com/pubie/\" target="_blank">here</a>.",
+      "source": "http://github.com/quique-gq/pubie.js"
+    },
+    {
       "name": "the-tower-of-power",
       "url": "http://ttop.quique.gq",
       "desc": "Arcade-style action maze game. Based on The Tower of Druaga.",
-      "source": "http://github.com/literal-line/the-tower-of-power"
+      "source": "http://github.com/quique-gq/the-tower-of-power"
     },
     {
       "name": "hello-world",
       "url": "http://hello-world.quique.gq",
       "desc": "Tile-based platformer thing. Spunch bop included at no extra cost.",
-      "source": "http://github.com/literal-line/hello-world"
+      "source": "http://github.com/quique-gq/hello-world"
     },
     {
       "name": "rpg-test-map-editor",
       "url": "http://rpg-test-map-editor.quique.gq",
       "desc": "Map editor for my project rpg-test. This hasn't been updated in a while and still uses an inefficient tile rendering method.",
-      "source": "http://github.com/literal-line/rpg-test-map-editor"
+      "source": "http://github.com/quique-gq/rpg-test-map-editor"
     },
     {
       "name": "rpg-test",
       "url": "http://rpg-test.quique.gq",
       "desc": "Open source Stick Ranger clone.",
-      "source": "http://github.com/literal-line/rpg-test"
+      "source": "http://github.com/quique-gq/rpg-test"
     },
     {
       "name": "ptc.js",
