@@ -1,14 +1,13 @@
 var site = (function () { // funny code
   'use strict';
 
+  var logo = document.getElementById('logo');
+  var caption = document.getElementById('caption');
   var iframe = document.createElement('iframe');
-  iframe.style = 'width: 100%; border: none; width: 100vw; height: calc(100vh - 180px)';
+  iframe.style = 'border: none; width: 100vw; height: calc(100vh - ' + logo.height + 'px)'; // yeah i do this twice
   document.body.appendChild(iframe);
 
   var doLogoCaption = function () {
-    var caption = document.createElement('p');
-    caption.style = 'position: absolute; top: 145px; left: 50px; text-shadow: -1px 1px 0 #000000, 1px 1px 0 #000000, 1px -1px 0 #000000, -1px -1px 0 #000000; font-weight: bold; color: #FFFFFF';
-    document.getElementById('containerY').appendChild(caption);
     var sacred = [
       'we do a little trolling',
       'grilled cheems sandwich',
@@ -51,6 +50,16 @@ var site = (function () { // funny code
     newText();
   };
 
+  var doIframeResize = function () {
+    var resizeHeight = function () {
+      caption.style.fontSize = (logo.height / 7) + 'px';
+      iframe.style.height = 'calc(100vh - ' + logo.height + 'px)';
+    };
+    window.addEventListener('resize', resizeHeight);
+    window.addEventListener('orientationchange', resizeHeight);
+    resizeHeight();
+  };
+
   var urlChange = function () {
     var pathname = iframe.contentWindow.location.pathname.slice(1);
     window.history.pushState('', '', pathname === 'home' ? '/' : '/' + pathname);
@@ -75,6 +84,7 @@ var site = (function () { // funny code
   return {
     go: function () {
       doLogoCaption();
+      doIframeResize();
     },
     urlChange: urlChange
   }
