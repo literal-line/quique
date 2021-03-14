@@ -16,15 +16,15 @@
     }
 
     @keyframes levitateX {
-      0% { transform: translateX(-20px); }
-      50% { transform: translateX(2vh); }
-      100% { transform: translateX(-20px); }
+      0% { transform: translateX(-2.5vh); }
+      50% { transform: translateX(1vh); }
+      100% { transform: translateX(-2.5vh); }
     }
 
     @keyframes levitateY {
-      0% { transform: translateY(-20px); }
+      0% { transform: translateY(-2vh); }
       50% { transform: translateY(0vh); }
-      100% { transform: translateY(-20px); }
+      100% { transform: translateY(-2vh); }
     }
 
     body {
@@ -45,12 +45,12 @@
     #containerX {
       height: 20vh;
       max-height: 157px;
-      animation: levitateX 8s cubic-bezier(.3, 0, .7, 1) infinite;
+      animation: levitateX 6s cubic-bezier(.3, 0, .7, 1) infinite;
       animation-delay: -2s;
     }
 
     #containerY {
-      animation: levitateY 3s cubic-bezier(.45, 0, .55, 1) infinite;
+      animation: levitateY 2.5s cubic-bezier(.45, 0, .55, 1) infinite;
       animation-delay: -0.75s;
     }
 
