@@ -5,5 +5,3 @@
   # https://github.com/kangax/html-minifier#options-quick-reference
   [plugins.inputs.minifierOptions]
     collapseWhitespace = true
-    minifyCSS = true
-    minifyJS = true
