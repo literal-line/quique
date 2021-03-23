@@ -2,7 +2,7 @@
 <ul>
   <li>Official Quique.gq website</li>
   <li>Written in vanilla HTML, CSS, and Javascript</li>
-  <li>Deployed in minified form using <a href="https://netlify.com">Netlify</a></li>
+  <li>Deployed with code minification using <a href="https://netlify.com">Netlify</a></li>
   <li>Has a pretty good <a target="_blank" href="https://www.webbloatscore.com/?url=quique.gq">bloat score</a></li>
 </ul>
 <h2>More</h2>
