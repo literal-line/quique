@@ -6,5 +6,5 @@
 </ul>
 <h2>More</h2>
 <ul>
-  <li><a href="https://g.quique.gq">g</a></li>
+  <li><a href="https://github.com/quique-gq/g">g</a></li>
 </ul>
