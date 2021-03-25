@@ -1,6 +1,12 @@
 {
   "projects": [
     {
+      "name": "g",
+      "url": "http://g.quique.gq",
+      "desc": "WIP hub for all <strike>ga̶̷̶m̶̷̶e̶̷̶s̶̷̶ educational</strike> content on Quique.gq.",
+      "source": "http://github.com/quique-gq/g"
+    },
+    {
       "name": "Pubie.js",
       "url": "http://pubie.quique.gq",
       "desc": "Javascript port of Hoylecake's game \"Pubie.\" The original game can be found <a href=\"https://hoylecake.com/pubie/\" target=\"_blank\">here</a>.",
