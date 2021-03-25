@@ -1,7 +1,6 @@
-<a href="https://quique.gq"><img height="100" src="https://quique.gq/assets/logo.svg"></a>
-<br>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dad463e0-d0df-47e9-9038-e83bdfd15eea/deploy-status)](https://app.netlify.com/sites/quique/deploys)
-=====
+<a href="https://quique.gq"><img height="100" src="https://quique.gq/assets/logo.svg"></a><br>
+Build status:&ensp;[![Netlify Status](https://api.netlify.com/api/v1/badges/dad463e0-d0df-47e9-9038-e83bdfd15eea/deploy-status)](https://app.netlify.com/sites/quique/deploys)
+------
 <ul>
   <li>Official Quique.gq website</li>
   <li>Written in vanilla HTML, CSS, and Javascript</li>
