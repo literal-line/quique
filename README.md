@@ -3,7 +3,7 @@ Build status:&ensp;[![Netlify Status](https://api.netlify.com/api/v1/badges/dad4
 ------
 <ul>
   <li>Official Quique.gq website</li>
-  <li>Written in vanilla (albeit subpar) HTML, CSS, and Javascript</li>
+  <li>Written in vanilla HTML, CSS, and Javascript (it's not that good)</li>
   <li>Deployed with code minification using <a href="https://netlify.com">Netlify</a></li>
   <li>Has a pretty good <a target="_blank" href="https://www.webbloatscore.com/?url=quique.gq">bloat score</a></li>
 </ul>
